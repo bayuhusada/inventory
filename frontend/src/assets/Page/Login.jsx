@@ -18,6 +18,7 @@ function Login() {
                 role
             });
             console.log('Login successful:', response.data);
+            localStorage.setItem('user', JSON.stringify(response.data.user));
             // Redirect ke halaman dashboard
             navigate('/'); // Ganti dengan path dashboard
         } catch (err) {
